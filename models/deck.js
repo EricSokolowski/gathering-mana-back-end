@@ -9,7 +9,7 @@ const deckCommentSchema = new Schema({
 
 const deckSchema = new Schema({
   title: String,
-  cards: {type: Schema.Types.ObjectId, ref: 'Cards'},
+  cards: [{type: Schema.Types.ObjectId, ref: 'Card'}],
   comments: [deckCommentSchema]
 },{
   timestamps: true,
