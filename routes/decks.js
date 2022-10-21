@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import * as decksCtrl from '../controllers/blogs.js'
+import * as decksCtrl from '../controllers/deck.js'
 import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 
 const router = Router()
