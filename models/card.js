@@ -7,7 +7,18 @@ const cardSchema = new Schema({
   cmc: Number,
   colorIdentity: String,
   text: String,
-  rarity: String
+  rarity: { 
+    type: String,
+    enum: ['common', 'uncommon', 'rare', 'mythic rare']
+  },
+  spellType: {
+    type: String,
+    enum: ['creature', 'instant', 'land', 'sorcery', 'planeswalker', 'artifact', 'enchantment']
+  },
+  superTypes: {
+    type: String,
+    enum: ['basic', 'legendary', 'snow', 'host', 'ongoing', 'world']
+  }
 },{
   timestamps: true,
 })
