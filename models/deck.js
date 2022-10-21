@@ -10,7 +10,8 @@ const deckCommentSchema = new Schema({
 const deckSchema = new Schema({
   title: String,
   cards: [{type: Schema.Types.ObjectId, ref: 'Card'}],
-  comments: [deckCommentSchema]
+  comments: [deckCommentSchema],
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 },{
   timestamps: true,
 })
