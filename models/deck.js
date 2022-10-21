@@ -2,10 +2,15 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const deckCommentSchema = new Schema({
+  content: String,
+  author: {type: Schema.Types.ObjectId, ref: 'Profile'}
+})
+
 const deckSchema = new Schema({
   title: String,
   cards: {type: Schema.Types.ObjectId, ref: 'Cards'},
-  comments: {type: Schema.Types.ObjectId, ref: 'Comment'}
+  comments: [deckCommentSchema]
 },{
   timestamps: true,
 })
