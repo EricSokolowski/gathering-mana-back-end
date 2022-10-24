@@ -35,7 +35,16 @@ const show = async (req, res) => {
 }
 
 const update = async (req, res) => {
-  
+  try {
+    const deck = await Deck.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    ).populate('onwer')
+    res.status(200).json(deck)
+  } catch (err) {
+    res.status(500).json(err)
+  }
 }
 
 const deleteDeck = async (req, res) => {
