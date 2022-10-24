@@ -24,7 +24,14 @@ const index = async (req, res) => {
 }
 
 const show = async (req, res) => {
-
+  try {
+    const deck = await Deck.findById(req.params.id)
+      .populate('onwer')
+      .populate('comments.onwer')
+    res.status(200).json(deck)
+  } catch (err) {
+    res.status(500).json(err)
+  }
 }
 
 const update = async (req, res) => {
