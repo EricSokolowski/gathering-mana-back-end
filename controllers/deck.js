@@ -20,25 +20,31 @@ const create = async (req, res) => {
 }
 
 const index = async (req, res) => {
-  
+
 }
 
 const show = async (req, res) => {
-
+  try {
+    const deck = await Deck.findById(req.params.id)
+      .populate('owner')
+      .populate('comments.author')
+    res.status(200).json(deck)
+  } catch (err) {
+    res.status(500).json(err)
+  }
 }
 
 const update = async (req, res) => {
-  
+
 }
 
 const deleteDeck = async (req, res) => {
-  
+
 }
 
 const createComment = async (req, res) => {
   
 }
-
 
 
 export {
