@@ -20,14 +20,14 @@ const create = async (req, res) => {
 }
 
 const index = async (req, res) => {
-  
+
 }
 
 const show = async (req, res) => {
   try {
     const deck = await Deck.findById(req.params.id)
-      .populate('onwer')
-      .populate('comments.onwer')
+      .populate('owner')
+      .populate('comments.author')
     res.status(200).json(deck)
   } catch (err) {
     res.status(500).json(err)
@@ -35,34 +35,16 @@ const show = async (req, res) => {
 }
 
 const update = async (req, res) => {
-  try {
-    const deck = await Deck.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    ).populate('onwer')
-    res.status(200).json(deck)
-  } catch (err) {
-    res.status(500).json(err)
-  }
+
 }
 
 const deleteDeck = async (req, res) => {
-  try {
-    const deck = await Deck.findByIdAndDelete(req.params.id)
-    const profile = await Profile.findById(req.user.profile)
-    profile.decks.remove({ _id: req.params.id })
-    await profile.save()
-    res.status(200).json(blog)
-  } catch (err) {
-    res.status(500).json(err)
-  }
+
 }
 
 const createComment = async (req, res) => {
   
 }
-
 
 
 export {
