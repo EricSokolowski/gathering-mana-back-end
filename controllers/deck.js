@@ -67,7 +67,21 @@ const deleteDeck = async (req, res) => {
 }
 
 const createComment = async (req, res) => {
-  
+  try {
+    req.body.owner = req.user.profile
+    const deck = await Deck.findById(req.params.id)
+    deck.comments.push(req.body)
+    await deck.save()
+
+    const newComment = deck.comments[deck.comments.length - 1]
+
+    const profile = await Profile.findById(req.user.profile)
+    newComment.author = profile
+
+    res.status(201).json(newComment)
+  } catch (err) {
+    res.status(500).json(err)
+  }
 }
 
 
