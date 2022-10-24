@@ -55,7 +55,15 @@ const update = async (req, res) => {
 }
 
 const deleteDeck = async (req, res) => {
-
+  try {
+    const deck = await Deck.findByIdAndDelete(req.params.id)
+    const profile = await Profile.findById(req.user.profile)
+    profile.decks.remove({ _id: req.params.id })
+    await profile.save()
+    res.status(200).json(deck)
+  } catch (err) {
+    res.status(500).json(err)
+  }
 }
 
 const createComment = async (req, res) => {
