@@ -20,7 +20,14 @@ const create = async (req, res) => {
 }
 
 const index = async (req, res) => {
-  
+  try {
+    const deck = await Deck.find({})
+      .populate('owner')
+      .sort({ createdAt: 'desc' })
+    res.status(200).json(deck)
+  } catch (err) {
+    res.status(500).json(err)
+  }
 }
 
 const show = async (req, res) => {
