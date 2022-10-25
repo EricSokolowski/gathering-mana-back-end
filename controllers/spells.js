@@ -4,7 +4,7 @@ function search(req, res) {
   
   axios.get(`https://api.magicthegathering.io/v1/cards?name=${req.body.spellQuery}`)
   .then(response => {
-    console.log('*response*',response.data, '*response*')
+    res.json(response.data.cards)
   })
 }
 
