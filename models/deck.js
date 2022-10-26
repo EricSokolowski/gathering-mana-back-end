@@ -7,9 +7,25 @@ const deckCommentSchema = new Schema({
   author: {type: Schema.Types.ObjectId, ref: 'Profile'}
 })
 
+const cardSchema = new Schema({
+  name: String,
+  cmc: Number,
+  colorIdentity: String,
+  text: String,
+  rarity: String,
+  spellType: {
+    type: String,
+  },
+  superTypes: {
+    type: String, 
+  }
+},{
+  timestamps: true,
+})
+
 const deckSchema = new Schema({
   title: String,
-  cards: [{type: Schema.Types.ObjectId, ref: 'Card'}],
+  cards: [cardSchema],
   comments: [deckCommentSchema],
   owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 },{
