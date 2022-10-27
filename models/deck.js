@@ -18,7 +18,8 @@ const cardSchema = new Schema({
   },
   superTypes: {
     type: String, 
-  }
+  },
+  imageUrl: String,
 },{
   timestamps: true,
 })
