@@ -1,73 +1,54 @@
-# Decoupled MERN Stack with JWT Auth Template - Back End
+# Gathering Magic
 
-This is the back end of a decoupled MERN Stack app that includes JWT Authentication.
+## Gathering Magic is a Full Stack web appliction designined to let users create their own decks.
 
-When combined with the front end found [here](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end), you'll have all you need to build a full stack MERN app!
 
-Use this to go build things! 🚀
 
-## To Use This Template
 
-**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
+# Getting Started 
+* [Trello](https://trello.com/b/2cbArLBF/gatheringmana)
+* [Front End Repo](https://github.com/EricSokolowski/gathering-mana-front-end.git)
+* [Deployed site](https://gathering-magic.netlify.app/)
+* [MTG API](https://docs.magicthegathering.io/)
+ <br>
+ <br>
+# Our Team
 
-```bash
-git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-back-end <name-of-your-app-here>-back-end
-cd <name-of-your-app-here>-back-end
-code .
-```
+Eric Sokolowski - [GitHub](https://github.com/EricSokolowski)
 
-With the project open in VS Code, open a terminal and run:
+David Vazquez - [GitHub](https://github.com/IPREM1ERI)
 
-```bash
-rm -rf .git
-```
+Marcus Hyman - [Github](https://github.com/hymanrcus)
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
+# Screenshots
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
+![landing Page](public/GathMagic-Landing.png)
 
-Re-initialize a git repository:
+![Deck Builder Page](public/GathMagic-DeckBuild.png)
 
-```bash
-git init
-```
+# Technologies Used:
 
-Create a repo for this project on GitHub and add that remote to your project with:
+<div align ="center">
+<br>
+<a href="#"><img src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" /> </a>
+<a href="#"><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />  </a>
+<a href ="#"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />  </a>
+<a href="#"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />  </a>
+<a href="#"><img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"> </a>
+<a href="#"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"> </a>
+<a href="#"><img src="https://img.shields.io/badge/react-%23323330.svg?style=for-the-badge&logo=react&logoColor=white"> </a>
+<br>
+</div>
+<br>
 
-```bash
-git remote add origin your-repo-URL-here
-```
 
-Run npm i to fetch the template's dependencies:
+# Ice Box
+<li>Limit the amount cards added
+<li>Add  win/loss data that user can provide
 
-```bash
-npm i
-```
 
-touch a .env file:
 
-```bash
-touch .env
-```
 
-Fill it with the following:
 
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-CLOUDINARY_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
 
-Replace the `DATABASE_URL`, `SECRET`, and `CLOUDINARY_URL` with values that you provide.
 
-> 🚨 Place secrets in this `.env` file. The contents of this file WILL NOT be exposed to site visitors.
-
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push origin main
-```
-
-You're done!
