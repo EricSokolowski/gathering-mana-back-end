@@ -11,4 +11,3 @@ function search(req, res) {
 export {
   search
 }
-//cards?/${}=${req.body.spellQuerry}

@@ -7,7 +7,7 @@ import formData from 'express-form-data'
 import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as decksRouter } from './routes/decks.js'
-import { router as spellsRouter } from './routes/spells.js'
+import { router as cardsRouter } from './routes/cards.js'
 
 import './config/database.js'
 
@@ -21,7 +21,7 @@ app.use(formData.parse())
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/decks', decksRouter)
-app.use('/api/spells', spellsRouter)
+app.use('/api/cards', cardsRouter)
 
 app.use(function (req, res, next) {
   res.status(404).json({ err: 'Not found' })

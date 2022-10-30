@@ -9,10 +9,7 @@ const deckCommentSchema = new Schema({
 
 const cardSchema = new Schema({
   name: String,
-  cmc: Number,
   colorIdentity: String,
-  text: String,
-  rarity: String,
   spellType: {
     type: String,
   },
