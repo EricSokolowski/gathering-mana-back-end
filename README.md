@@ -1,17 +1,17 @@
 # Gathering Magic
 
-## Gathering Magic is a Full Stack web appliction designined to let users create their own decks.
-
+## Gathering Magic is a Full Stack web application designed to let users create their own decks.
 
 
 
 # Getting Started 
 * [Trello](https://trello.com/b/2cbArLBF/gatheringmana)
-* [Front End Repo](https://github.com/EricSokolowski/gathering-mana-front-end.git)
+* [Front End Repo](https://github.com/EricSokolowski/gathering-mana-front-end)
 * [Deployed site](https://gathering-magic.netlify.app/)
 * [MTG API](https://docs.magicthegathering.io/)
  <br>
  <br>
+
 # Our Team
 
 Eric Sokolowski - [GitHub](https://github.com/EricSokolowski)
@@ -28,6 +28,7 @@ Marcus Hyman - [Github](https://github.com/hymanrcus)
 
 # Technologies Used:
 
+
 <div align ="center">
 <br>
 <a href="#"><img src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white" /> </a>
@@ -43,9 +44,9 @@ Marcus Hyman - [Github](https://github.com/hymanrcus)
 
 
 # Ice Box
-<li>Limit the amount cards added
-<li>Add  win/loss data that user can provide
-
+<li>Limit the amount cards added accorrding to the many deck building formats
+<li>Game Inspired CSS
+<li>Add user provided win/loss data
 
 
 
