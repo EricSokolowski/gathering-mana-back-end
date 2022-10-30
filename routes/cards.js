@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import * as spellsCtrl from '../controllers/spells.js'
+import * as cardsCtrl from '../controllers/cards.js'
 import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 
 const router = Router()
@@ -9,6 +9,7 @@ const router = Router()
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
-router.post('/search', checkAuth, spellsCtrl.search)
+
+router.post('/search', checkAuth, cardsCtrl.search)
 
 export { router }
